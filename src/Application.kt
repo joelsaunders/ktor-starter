@@ -63,6 +63,8 @@ fun Application.module(testing: Boolean = false) {
         }
     }
 
+    DatabaseFactory.init()
+    
     routing {
         post("/login") {
             val post = call.receive<LoginRegister>()
